@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Robbingo</title>
+    <title>Credingo</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- Chrome for Android theme color -->
     <meta name="theme-color" content="#a3232a">
@@ -18,13 +18,13 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Robbingo">
+    <meta name="application-name" content="Credingo">
     <link rel="icon" sizes="192x192" href="/robbingo.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Robbingo">
+    <meta name="apple-mobile-web-app-title" content="Credingo">
     <link rel="apple-touch-icon" href="/robbingo.png">
 
 
@@ -43,12 +43,13 @@
 <body unresolved ng-app="robbingo" ng-strict-di>
     <toast></toast>
     <div class="header">
-        <h1 ng-click="$state.go('play')">Robbingo</h1>
+        <h1 ng-click="$state.go('play')">Credingo</h1>
     </div>
     <ui-view/>
 
     <!--@*Javascript*@-->
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="/app/fix_lowercase.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/ngToast/dist/ngToast.js"></script>

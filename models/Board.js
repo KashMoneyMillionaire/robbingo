@@ -1,8 +1,6 @@
-'use strict';
 
-var mongoose = require('mongoose');
-
-var Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
 
 var BoardSchema = new Schema({
     active: {
@@ -10,9 +8,9 @@ var BoardSchema = new Schema({
         default: true
     },
     squares: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Square'
     }]
 });
 
-module.exports = mongoose.model('Square', BoardSchema);
+export default model('Square', BoardSchema);

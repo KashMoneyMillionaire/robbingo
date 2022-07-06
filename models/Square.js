@@ -1,8 +1,6 @@
-'use strict';
 
-var mongoose = require('mongoose');
-
-var Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
 
 var SquareSchema = new Schema({
     text: {
@@ -19,4 +17,4 @@ var SquareSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Square', SquareSchema);
+export default model('Square', SquareSchema);

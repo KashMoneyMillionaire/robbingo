@@ -1,8 +1,7 @@
 'use strict';
 
-var mongoose = require('mongoose');
-
-var Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
 
 var GameSchema = new Schema({
     active: {
@@ -10,13 +9,13 @@ var GameSchema = new Schema({
         default: true
     },
     boards: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Board'
     }],
     squares: [{
-        type: mongoose.Schema.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Square'
     }]
 });
 
-module.exports = mongoose.model('Game', GameSchema);
+export default model('Game', GameSchema);

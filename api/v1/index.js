@@ -1,11 +1,8 @@
-'use strict';
+import { Router } from 'express';
+import bodyparser from 'body-parser';
+import Square from '../../models/Square.js';
 
-var express = require('express');
-var bodyParser = require('body-parser');
-
-var router = express.Router();
-
-var Square = require('../../models/Square');
+var router = Router();
 
 router.get('/generate', function(req, res, next) {
     Square.find({}).exec(function(err, data) {
@@ -38,7 +35,7 @@ router.get('/squares', function(req, res, next) {
     });
 });
 
-router.post('/squares/suggest', bodyParser.json(), function(req, res, next) {
+router.post('/squares/suggest', bodyparser.json(), function(req, res, next) {
     if (!req.body) return res.sendStatus(400);
 
     var square = new Square({ text: req.body.text });
@@ -74,4 +71,4 @@ router.put('/squares/:id/active', function(req, res, next) {
     });
 });
 
-module.exports = router;
+export default router;

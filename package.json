@@ -8,30 +8,29 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/bower/bin/bower install"
   },
-  "engines": {
-    "node": "5.7.1"
-  },
+  "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/ganders/robbingo.git"
+    "url": "git+ssh://git@github.com:KashMoneyMillionaire/robbingo.git"
   },
   "author": "Greg Anders and Kash Cummings",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/ganders/robbingo/issues"
+    "url": "https://github.com/KashMoneyMillionaire/robbingo/issues"
   },
-  "homepage": "https://gitlab.com/ganders/robbingo#README",
+  "homepage": "https://github.com/KashMoneyMillionaire/robbingo",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "bower": "^1.7.7",
-    "express": "^4.13.4",
-    "mongoose": "^4.4.6"
+    "body-parser": "1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "4.18.1",
+    "mongoose": "6.4.3"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^2.1.0",
-    "browser-sync": "^1.3.7",
-    "gulp-autoprefixer": "1.0.0",
-    "gulp-jade": "^1.1.0"
+    "bower": "1.8.14",
+    "browser-sync": "2.27.10",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-jade": "1.1.0",
+    "gulp-sass": "5.1.0"
   }
 }
