@@ -1,0 +1,10 @@
+#container.robism-container(style='opacity: 0;')
+  .robism-form
+    h1 What's your best Rob-ism?
+    textarea#robism(ng-model='create.input', 
+                    name='text')
+    button(ng-click='create.create()'
+           ng-disabled="!create.input") Submit
+    span(ng-bind='create.message', 
+         ng-show='create.message', 
+         ng-class='create.messageType')

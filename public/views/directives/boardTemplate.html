@@ -1,0 +1,1 @@
+<div class="board"><div ng-repeat="col in [0,1,2,3,4]" class="board-col"><div ng-repeat="row in [0,1,2,3,4]" ng-class="board.buildClass(board.tiles[col][row])" ng-click="board.tiles[col][row].isSelected = !board.tiles[col][row].isSelected" ng-bind="board.tiles[col][row].text" class="tile"></div></div></div>

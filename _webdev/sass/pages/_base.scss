@@ -1,0 +1,44 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: darkred;
+}
+
+.success {
+    color: seagreen;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background: #a3232a;
+    color: white;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,.2);
+    
+    h1 {
+        font-style: italic;
+        font-size: 5vh;
+        cursor: pointer;             
+    }    
+}
+
+button {
+    border-radius: 20px;
+    
+    &:disabled {
+        opacity: .5;
+        box-shadow: none !important;
+    }  
+}
+
+input, textarea {    
+    outline: none;
+}

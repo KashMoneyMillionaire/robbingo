@@ -1,0 +1,78 @@
+@import "../_variables/_colors.scss";
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 100px);
+}
+
+.board {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url(https://i.vimeocdn.com/video/281616115_1280x720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+.tile {
+    position: relative;
+    width: 15.5vmin;
+    height: 15.5vmin;
+    padding: 5px;
+    word-wrap: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vmin;
+    user-select: none;
+    color: black;
+    background: white;
+    border-top: 1px solid $credera-blue;
+    border-left: 1px solid $credera-blue;
+    
+    &.isBottom {
+        border-bottom: 1px solid $credera-blue;
+    }
+       
+    &.isRight {
+        border-right: 1px solid $credera-blue;
+    }
+    
+    &.bingoLeft {
+        border-left: 1px solid $board-highlight-color;
+    }
+        
+    &.bingoTop {
+        border-top: 1px solid $board-highlight-color;
+    }
+    
+    &.isSelected {
+        background: none;
+        color: white;        
+    }
+    
+    &.isBingo {
+        z-index: 20;
+        border-top: 1px solid $board-highlight-color;
+        border-left: 1px solid $board-highlight-color;
+        box-shadow: 0 0 10px rgba($board-highlight-color,.8);
+        
+        &.isBottom {
+            border-bottom: 1px solid $board-highlight-color;
+        }
+        
+        &.isRight {
+            border-right: 1px solid $board-highlight-color;
+        }
+                
+    }
+    
+}
+

@@ -1,0 +1,206 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.error {
+  color: darkred; }
+
+.success {
+  color: seagreen; }
+
+.header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: #a3232a;
+  color: white;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2); }
+  .header h1 {
+    font-style: italic;
+    font-size: 5vh;
+    cursor: pointer; }
+
+button {
+  border-radius: 20px; }
+  button:disabled {
+    opacity: .5;
+    box-shadow: none !important; }
+
+input, textarea {
+  outline: none; }
+
+.content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: calc(100% - 100px); }
+
+.board {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  background: url(https://i.vimeocdn.com/video/281616115_1280x720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; }
+
+.tile {
+  position: relative;
+  width: 15.5vmin;
+  height: 15.5vmin;
+  padding: 5px;
+  word-wrap: normal;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8vmin;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: black;
+  background: white;
+  border-top: 1px solid dodgerblue;
+  border-left: 1px solid dodgerblue; }
+  .tile.isBottom {
+    border-bottom: 1px solid dodgerblue; }
+  .tile.isRight {
+    border-right: 1px solid dodgerblue; }
+  .tile.bingoLeft {
+    border-left: 1px solid #a3232a; }
+  .tile.bingoTop {
+    border-top: 1px solid #a3232a; }
+  .tile.isSelected {
+    background: none;
+    color: white; }
+  .tile.isBingo {
+    z-index: 20;
+    border-top: 1px solid #a3232a;
+    border-left: 1px solid #a3232a;
+    box-shadow: 0 0 10px rgba(163, 35, 42, 0.8); }
+    .tile.isBingo.isBottom {
+      border-bottom: 1px solid #a3232a; }
+    .tile.isBingo.isRight {
+      border-right: 1px solid #a3232a; }
+
+.robism-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+  transition: all 1.0s ease-in-out; }
+
+.robism-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .robism-form label {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 40px; }
+  .robism-form textarea {
+    resize: none;
+    height: 100px;
+    width: 500px;
+    font-size: 2em;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid black;
+    word-wrap: break-word;
+    vertical-align: center; }
+  .robism-form button {
+    font-size: 1.2em;
+    margin-top: 50px;
+    height: 60px;
+    width: 250px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 0.4em 0;
+    line-height: 1.25;
+    transition: all 0.15s ease-in-out;
+    color: white;
+    background: #3d96cb;
+    border: none;
+    outline: 0; }
+    .robism-form button:hover {
+      box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4); }
+  .robism-form span {
+    padding-top: 40px;
+    font-size: 2em; }
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px; }
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6; }
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1; }
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc; }
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1; }
